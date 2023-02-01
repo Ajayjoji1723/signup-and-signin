@@ -4,7 +4,7 @@ const sqlite3 = require("sqlite3").verbose();
 const path = require("path");
 const bcrypt = require("bcrypt");
 const cors = require("cors");
-const PORT = 3001;
+const port = process.env.PORT || 3001
 
 
 const dbPath = path.join(__dirname, "userdata.db");
@@ -20,8 +20,8 @@ const initializeDBAndServer = async () => {
       filename: dbPath,
       driver: sqlite3.Database,
     });
-    app.listen(PORT, ()=>{
-      console.log(`Server running at ${PORT}`);
+    app.listen(port, ()=>{
+      console.log(`Server Running at ${port}`);
     });
   } catch ( e ) {
     console.log(`DB Error: ${e.message}`);
