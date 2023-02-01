@@ -1,0 +1,11 @@
+POST http://localhost:3001/register/
+Content-Type: application/json
+
+{
+  "optionid":"Employee",
+  "username":"Sunny",
+  "mailid":"sunny@gmail.com",
+  "copanyname":"VMC",
+  "mobilenum":8125674345,
+  "password":"Sunny@123"
+}
